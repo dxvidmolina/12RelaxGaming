@@ -1,44 +1,9 @@
-import { response } from 'express';
-import React, {Component} from 'react';
+import React from 'react';
 
-
-class Productos extends Component{
-
-    constructor () {
-        super ()
-
-        this.state = {
-            productosList : []
-        }
-    }
-
-    apicall(url,consecuencia) {
-        fetch(url)
-        .then(res =>{
-            return res.json()
-        })
-        .then(prod=>{
-            this.setState({productosList: prod.data})
-        })
-        .catch(error => console.log(error))
-    }
-
-    render(){
+function Productos(){
     return(
-        
-        
-            <div>
-                
-                <p>hola</p>
-
-            </div>
-        
-     
+        <h2>titulo pelicula</h2>
     )
-        
-
-    
-}
 }
 
 export default Productos;

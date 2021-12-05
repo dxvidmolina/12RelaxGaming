@@ -17,7 +17,8 @@ const loginController=
          db.User.findOne({
             where: {email:req.body.email}
         }).then(function async (userToLogin){
-            if(await userToLogin.password === req.body.password){
+            let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if( passwordCorrect){
                 req.session.userLogged = userToLogin;
                 res.redirect('/login/perfil')
             }
