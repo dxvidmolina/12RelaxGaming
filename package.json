@@ -1,0 +1,39 @@
+{
+  "name": "sprint",
+  "version": "1.0.0",
+  "description": "Integrantes:",
+  "main": "bin/www",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.13.0",
+    "http-errors": "~1.6.3",
+    "method-override": "^3.0.0",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.3",
+    "mysql2": "^2.3.2",
+    "node-fetch": "^2.6.5",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.7.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imberzox/12relaxGames.git"
+  },
+  "bugs": {
+    "url": "https://github.com/imberzox/12relaxGames/issues"
+  },
+  "homepage": "https://github.com/imberzox/12relaxGames#readme"
+}

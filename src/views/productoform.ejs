@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Create</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/styleProductoForm.css">
+
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %> 
+    <div class="errores">
+      <% if(locals.errores) { %>
+          <% errores.forEach(error => { %> 
+          <p> <%=error.msg%> </p>
+      <% }) %>
+      <% } %> 
+  </div>
+    <h1>Editar Juego:"<%= productToEdit.name %> "</h1>
+
+    <main >
+      <div class="div-form">
+
+      <form action= "/products/edit/<%= productToEdit.id %>" method="POST">
+  
+          <div class="form-edit">
+            <label for="nombreJuego">Nombre Juego:</label>
+            <input type="text"  value="<%= productToEdit.name %>" name="nombreJuego" id="nombreJuego">
+            <div class='input' id='danger'></div>
+          </div>
+          
+          <div class="form-edit" >
+            <label for="precio">Precio:</label>
+            <input type="text" value="<%= productToEdit.price %>" name="precio"  id="precio">
+          </div>
+  
+          <div class="form-edit">
+            <label for="detalleJuego">Detalle Producto:</label>
+            <input type="text" value="<%= productToEdit.description %>" name="detalleJuego" id="detalleJuego">
+            <div class='description' id='danger'></div>
+          </div>
+
+          <div class="form-edit">
+            <label for="descuento">Descuento:</label>
+            <input type="text" value="<%= productToEdit.discount %>" name="descuento" id="descuento">
+          </div>
+
+          <select name="generos" id="generos">
+            <option value="1">Accion</option>
+            <option value="2">Disparos</option>
+            <option value="3">Estrategia</option>
+            <option value="4">SimulaciÃ³n</option>
+            <option value="5">Deporte</option>
+            <option value="6">Carreras</option>
+            <option value="7">Aventura</option>
+            <option value="8">Rol</option>
+            <option value="9">Otro</option>
+          </select>
+
+          
+        
+          <div class="form-edit">
+            <button type="submit">
+              Editar
+            </button>
+          </div>
+        </form>
+
+        <form action="/products/edit/<%= productToEdit.id %>?_method=DELETE" method="POST">
+          <button type="submit">
+            Borrar
+          </button>
+        </form>
+      </div>
+        
+    </main>
+    <%- include("partials/footer.ejs") %> 
+    <script src='/js/edit.js'></script>
+  </body>
+</html>

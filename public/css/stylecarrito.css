@@ -1,0 +1,131 @@
+body{
+    background-image: url(/images/16013.jpg);
+    font-family: roboto;
+}
+h2{
+    text-align: center;
+}
+
+.header-move{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.size-images{
+    width: 70px;
+    height: 90px;
+    border-radius: 9px;
+    display: inline-block;
+}
+
+.navbar{
+    display: none;
+}
+.guardados-carritos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    max-width: 800px;
+    margin: auto;
+}
+.guardados-carritos a{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+    max-width: 800px;
+}
+
+article{
+    display: flex;
+    background-color: rgba(125, 125, 125, 0.7);
+    border-radius: 9px;
+    margin: 4px;
+    
+}
+.article-flex{
+    display: flex;
+    justify-content: space-between;
+
+    justify-content: space-between;
+    }
+.article-flex2{
+    display: block;
+    margin: 8px;
+    text-align: center;
+    }
+.article-flex3{
+    
+    display: flex;
+    margin-top: 27px;;
+    padding: 0;
+    min-width: 190px;
+    justify-content: space-between;
+
+}
+.precio{
+    display: flex;
+    align-items: center;
+    margin-right: 15%;
+}
+
+.section2 {
+
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: auto;
+
+
+}
+
+article.article3 {
+
+    display: block;
+    flex-wrap: wrap;
+    align-self: center;
+    text-align: center;
+
+}
+.article4{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    justify-content: space-around;
+
+}
+.boton-final{
+    background-color: green;
+    border-radius: 9px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+}
+
+@media (min-width: 730px){
+    .section2{
+        justify-content: space-around;
+    }
+    .articulos article{
+        max-width: 900px;
+        margin: auto;
+        margin-top: 16px
+    }
+    .size-images{
+        width: 85px;
+        height: 96px;
+    }
+    .article-flex{
+        min-width: 800px;
+        justify-content: space-between;
+        margin: auto;
+    }
+    .section2{
+        max-width: 1000px;
+    
+    }
+    
+}

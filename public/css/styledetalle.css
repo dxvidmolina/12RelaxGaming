@@ -1,0 +1,181 @@
+*{
+    box-sizing:border-box;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+body{
+
+    font-family: "Roboto", sans-serif; 
+    background-image: url(/images/mito.jpg);
+    background-size:cover ;
+    background-position:center ;
+   
+}
+
+.navbar{
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    height: 79px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    background-color: blueviolet;
+    opacity: .9;
+    position: fixed;
+}
+.navbar:hover{
+    box-shadow:10px 10px 10px #f700ff96; 
+}
+.main-navbar{
+    text-align: center;
+    margin-top: 20px;
+}
+.main-navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0px 15px;
+    opacity: 1;
+    color: #2924a896;
+}
+.main-navbar a:hover{
+    color:#efeb65 ;
+}
+main{
+    
+    position: relative;
+    top: 100px;
+}
+.contenedor{
+    width: auto;
+    margin: 40px;
+    max-width: 700px;
+    height: auto;
+    
+}
+.contenedor img{
+    width: 90%;
+    max-width: 500px;
+    border-radius: 7px;
+    z-index: 0;
+}
+
+.info-flex{
+    display: flex;
+    justify-content: center;
+}
+.informacion{
+    width: 60vh;
+    height: 30vh;
+    font-size: 20px; 
+    background-color:#7a7a7a96;
+    box-shadow:10px 10px 10px #2924a896; 
+    border-radius: 5px;   
+    text-align: center;
+    padding: 10px;
+    align-self: center;
+}
+.informacion img{
+    width: 60vw;
+    max-width: 260px;
+    height: 25%;
+}
+.informacion:hover{
+    box-shadow:10px 10px 10px #f700ff96;
+}
+.compra{
+    display: flex;
+    padding: 10px;
+    margin: 0 10px;
+    justify-content: center;
+}
+.boton button{
+    width: 180px;
+    height: 40px;
+    background-color:#f700ff96;
+    border: 1;
+}
+
+.precio{
+    background-color:#f700ff96;
+    padding: 5px;
+    flex-grow: 1;
+    margin-right: 5px;
+}
+.oferta{
+    display: flex;
+    background-color: #f700ff96;
+    align-items: center;
+    margin-right: 5px;
+    flex-grow: 2;
+    justify-content: center;
+}
+.todo{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+@media (max-width:700px){
+    .juego1{
+        width: 80%;
+    }
+    .juego1 img{
+        width: 24%;
+    }
+}
+@media (min-width:768){
+    .todo{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    body{
+        background-image:url(/images/artistic-retrowave-sunrise-vaporwave.jpg) ;
+    }
+    .navbar{
+        display: flex;
+        justify-content: center;
+    }
+    .informacion{
+        margin-right: 50px;
+        margin-top: 39px;
+    }
+    .informacion:hover{
+        box-shadow:10px 10px 10px #f700ff96;
+    }
+    .compra{
+        margin-top: 80px;
+        display: flex;
+        background-color: #00000096;
+        margin-left: 5px;
+        width: 100%;
+    }
+    .juego1{
+        justify-content: center;
+    }
+    .juego1 img{
+        margin: 0 6px;
+        width: 20vh;
+        height: 15vh;
+    }
+    .juego1 img:hover{
+        box-shadow:10px 10px 10px #f700ff96;
+    }
+    .navbar{
+        margin-top: 20px;
+    }
+    .oferta{
+        display: flex;
+        background-color: #f700ff96;
+        align-items: center;
+        margin-right: 5px;
+        flex-grow: 2;
+        justify-content: center;
+    }
+    .precio{
+        margin-right: 5px;
+        flex-grow: 1;
+    }
+}

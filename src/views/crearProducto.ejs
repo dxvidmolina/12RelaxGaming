@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleCarga.css">
+    <title>Relax Games</title>
+</head>
+<%- include('./partials/head.ejs') %>
+<body>
+<%- include('./partials/header.ejs') %>
+    <section>
+        <div class=" inputs">
+            <h2>Bienvenido a la sección de creación de productos</h2>
+            <form action="/products/create" method="POST" enctype="multipart/form-data">
+                <label for="name"></label>
+                    
+                    <div class="errores">
+                        <% if(locals.errores) { %>
+                            <% errores.forEach(error => { %> 
+                            <p> <%=error.msg%> </p>
+                        <% }) %>
+                        <% } %> 
+                    </div>
+
+                    <input type="text" placeholder="Nombre del juego" name="name" id="nombreJuego">
+                    <div class= 'nombreJuego'  id='danger'></div>
+
+                <label for="price"></label>
+                    <input type="number" placeholder="Precio" name="price" id="precio">
+                    <div class= 'precio'  id='danger'></div>
+
+                <label for="descuento"></label>
+                    <input type="text" placeholder="descuento" name="descuento" id="descuento">
+
+                <label for="Desc"></label>
+                    <input type="text" placeholder="Desc. del producto" name="desc" id="description">
+                    <div class='description' id='danger'></div>
+                <select name="generos" id="generos">
+                    <option value="1">Accion</option>
+                    <option value="2">Disparos</option>
+                    <option value="3">Estrategia</option>
+                    <option value="4">SimulaciÃ³n</option>
+                    <option value="5">Deporte</option>
+                    <option value="6">Carreras</option>
+                    <option value="7">Aventura</option>
+                    <option value="8">Rol</option>
+                    <option value="9">Otro</option>
+
+
+                </select>
+                    
+                <label for="img"></label>
+                    <input type="file" name="img" id="img">
+                    <p>Recuerda que solo puedes vender productos físicos en tu país(o ciudad)</p>
+                    <input type="submit" name="submit" id="">
+            </form>
+        </div>
+    </section>
+    <script src='/js/creatte.js'></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+body{
+        background-image: url(/images/16013.jpg);
+        text-align: center;
+    }
+    form{
+        margin: auto;
+        
+    }
+    .div-form{
+        border-radius: 7px;
+        background-color: rgba(0,0,0,0.9);
+        max-width: 500px;
+        text-align: center;
+        margin: auto;
+        padding: 5px;
+        
+    }
+    button{
+        text-align: center;
+        margin: auto;
+    }
+    label{
+        color: white;
+    }
+.form-edit{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+.div-form{
+    border-radius: 7px;
+    background-color: rgba(0,0,0,0.9);
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    
+}
+button{
+    text-align: center;
+    margin: auto;
+}
+label{
+    color: white;
+    font-size: 18px;
+}
+.form-edit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 18px;
+}
+input{
+    font-size: 20px;
+}
+#danger{
+    color:red
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styleListado.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <%- include("./partials/header") %>
+    </div>
+
+    <section class="articulos">
+        <% producto.forEach(function(producto){ %>
+            <article>
+                <div class="imagen">
+                    <img src="/images/<%=producto.imgref%>" alt="">
+                </div>
+               <div class="parametrosFlex">
+                <div class="parametros">
+                    <ul>
+                        
+                        <li>Nombre: <%= producto.generos.name %>  </li>
+                        <li>Nombre: <%= producto.name %>  </li>
+                        <li>Descuento: <%=producto.discount  %>  </li>
+                        <li>Precio: $ <%=producto.price %>  </li>
+                    </ul>
+                </div>
+               </div>
+            </article>
+        <% }) %>
+    </section>
+
+<div>
+    <%- include("./partials/footer") %>
+</div>
+</body>
+</html>

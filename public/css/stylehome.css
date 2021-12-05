@@ -1,0 +1,192 @@
+*{
+    box-sizing:border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+}
+body::-webkit-scrollbar{
+    width: 2rem;
+}
+body::-webkit-scrollbar-track{
+    background: #190087;;
+}
+body::-webkit-scrollbar-thumb{
+    background: #A230ED;
+}
+.fondo{
+    background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:blueviolet;
+    opacity: .7;
+    font-size: 10px;
+    width: 100%;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 10px;
+}
+.nav-links a{
+    margin-right: 2em;
+    text-decoration: none;
+    color: rgb(54, 0, 54);
+    font-weight: 700;
+    font-size: 1.7em;
+}
+.nav-links a:hover{
+    color: rgb(98, 0, 98);
+}
+.nav-links a i{
+    font-size: 1em;
+}
+.buscador{
+    margin-top: 2em;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+.buscador input{
+    width: 30vw;
+    height: 2.5em;
+    margin-right: 1em;
+    border-radius: 5px;
+    border: 0px;
+}
+.buscador button{
+    transform: scale(1.5);
+    border: 0px;
+    margin-right: 5px ;
+    background-color: white;
+}
+.banner{
+    background-image: url(/images/banner.PNG);
+    width: 100vw;
+    margin-top: 1em;
+    box-shadow: 0 0 1em black;
+    object-fit: cover;
+
+}
+
+.banner-padre{
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+.titulo-padre{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+}
+.titulo{
+    text-align: left;
+    background-color: blueviolet;
+    display: inline-block;
+    margin-top: 2em;
+
+    padding: 1em;
+    border-radius: .5em;
+    font-weight: 400;
+    transition-duration: .5s;
+    font-size: 2em;
+}
+
+.titulo:hover{
+    transform: scale(1.1);
+}
+.juegos-padre{
+    display: flex;
+    justify-content: center;
+}
+.juegos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-left: 1.2em;
+}
+.juegos img{
+    margin-top: 1em;
+    box-shadow: 0 0 1.5em black;
+    transition-duration: .4s;
+    margin-left: 10px;
+    width: 10em;
+    border-radius: 15px;
+    justify-content: center;
+}
+.juegos img:hover{
+    transform: scale(1.1);
+    box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.644);
+}
+
+.icono i{
+    font-size: 2em;
+    color: rgb(166, 84, 243);
+    filter: drop-shadow(0 0 1.5em black);
+    transition-duration: .3s;
+}
+
+.icono i:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    width: 100%;
+    background-color: wheat;
+}
+
+@media (min-width:390px){
+    *{
+        font-size: 20px;
+    }
+
+
+    body{
+        background-image: url(/images/Vaporwave-4K-Wallpapers.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .banner{
+        background-image: url(/images/banner.PNG);
+        width: 40vw;
+        margin-top: 1em;
+        box-shadow: 0 0 1em black;
+        display: block;
+    }
+
+    .juegos-padre{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .juegos{
+        width: 100vw;
+        margin-top: 1em;
+        margin-left: 3.5em;
+        margin-right: 3.5em;
+        padding-left: 22em;
+    }
+    .juegos img{
+        box-shadow: 0 0 1.5em black;
+        transition-duration: .5s;
+        width: 11vw;
+        margin-right: 1em;
+        margin-left: 1em;
+        border-radius: 8px;
+        justify-content: center;
+    }
+
+}
