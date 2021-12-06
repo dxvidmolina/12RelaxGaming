@@ -17,11 +17,33 @@ const loginController=
          db.User.findOne({
             where: {email:req.body.email}
         }).then(function async (userToLogin){
-            let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+            if(userToLogin){
+                let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
+                if(passwordCorrect){
+                    req.session.userLogged = userToLogin;
+                    return res.redirect('/login/perfil')
+                }
+                return res.render('login',{
+                    errors: {
+                        email: {
+                            msg: "Email o Contraseña son incorrectos"
+                        }
+                    }
+                })
+            }
+           /* req.session.userToLogin = userLogued;*/
+            return res.render('login',{
+                errors: {
+                    email: {
+                        msg: "Email inválido"
+                    }
+                }
+            })
+            /*let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if( passwordCorrect){
                 req.session.userLogged = userToLogin;
                 res.redirect('/login/perfil')
-            }
+            }*/
             
             /*
             if(passwordCorrect){
@@ -47,7 +69,7 @@ const loginController=
                 }
             })
         */})
-        /*if(userToLogin){
+       /* if(userToLogin){
             let passwordCorrect = bcryptjs.compareSync(req.body.password, userToLogin.password)
             if(passwordCorrect){
                 req.session.userLogged = userToLogin;
